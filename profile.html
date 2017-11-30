@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | E-commerce</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">Bin tan</strong>
+                             </span> <span class="text-muted text-xs block">个人详情 <b
+                                    class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">购买记录</a></li>
+                            <li><a href="sell.html">详细信息</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+
+                <li>
+                    <a href="product.html"><i class="fa fa-tags"></i> <span class="nav-label">Buy</span> </a>
+                </li>
+                <li>
+                    <a href="sellp.html"><i class="fa fa-cny"></i> <span class="nav-label">Relase</span></a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control"
+                                   name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to ElecTransaction.com</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i> <span class="label label-warning"></span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i> <span class="label label-primary"></span>
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>订单记录</h2>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="ibox">
+
+                        <div class="ibox-content">
+
+
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+
+                                    <tbody>
+                                    <tr>
+
+                                        <td class="desc">
+                                            <h3>
+                                                <a href="#" class="text-navy">
+                                                    光伏电
+                                                </a>
+                                            </h3>
+                                            <p class="small">
+                                                交易地址：<br/><font id = tx>0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421</font>
+                                            </p>
+                                            <p class="small">
+                                                数量：<font>23</font>
+                                            </p>
+                                            <dl class="small m-b-none">
+                                                <dt>购买自：Smith</dt>
+                                                <dd></dd>
+                                            </dl>
+
+
+                                        </td>
+                                        <td>
+                                            <h3>
+                                                <font>￥ 9.2</font>
+                                            </h3>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="ibox-content">
+
+                            <button id="confirm" class="btn btn-primary pull-right"><i class="fa fa "></i>确认收货</button>
+                            <br/><p></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+</body>
+<script>
+    $('#confirm').click(function () {
+        swal({
+                title: "确认收货将不可撤回",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1AB394",
+                confirmButtonText: "已收到",
+                cancelButtonText: "取消",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal("交易成功", "对方将会收到你的付款", "success");
+                    setTimeout(function () {
+                        document.getElementById('confirm').innerText = "已确认收货";
+                        document.getElementById('confirm').classList.value = "btn btn-warning pull-right";
+                    },1000);
+                    setTimeout(function () {
+                        document.getElementById('tx').innerText +=
+                            "\n 0x3d7f9b72b7cc13e5e555b9992ac26fbc9eedfdf3216659523fb9b08b8065f9dd";
+                    },4000);
+
+                } else {
+                    swal("已取消", "","error");
+                }
+
+            });
+    });
+</script>
+</html>
